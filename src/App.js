@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   // static list
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <>
+      <NewExpense/>
       <Expenses items={expenses}/>
     </>
   );
