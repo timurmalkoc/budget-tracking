@@ -1,23 +1,34 @@
 import React, { useState } from "react";
 import './ExpenseForm.css';
 
-const ExpneseForm = () =>{
+const ExpneseForm = (props) =>{
     const [title, setTitle] = useState('');
     const [amount, setAmount] = useState('');
     const [date, setDate] = useState('');
+    const [btn, setBtn] = useState("hide")
 
     const submitHandler = (e) =>{
         e.preventDefault();
 
-        const expenseDate = {
+        const expenseData = {
             title: title,
             amount: amount,
             date: new Date(date)
         };
+
+        props.onSaveExpenseData(expenseData);
         setTitle('');
         setAmount('');
         setDate('');
+        setBtn('hide');
     };
+
+
+    if(btn==='hide')
+    return(
+        <button onClick={()=> {setBtn('show')}}>Add New Expense</button>
+    );
+
     return(
         <form onSubmit={submitHandler}>
             <div className="new-expense__controls">
@@ -35,6 +46,7 @@ const ExpneseForm = () =>{
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button type="button" onClick={()=> {setBtn('hide')}}>Cancel</button>
                 <button type="submit">Add Expense</button>
             </div>
         </form>

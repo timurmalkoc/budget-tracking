@@ -7,3 +7,10 @@
     border-radius: 12px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 10);
   }
+  
+.expenses__emty {
+    color: aliceblue;
+    padding-left: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
