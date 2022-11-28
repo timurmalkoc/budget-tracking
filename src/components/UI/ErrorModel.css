@@ -1,0 +1,85 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+}
+  
+.modal {
+    position: fixed;
+    top: 30vh;
+    left: 10%;
+    width: 80%;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #f1e0fc;
+    border-radius: 10px;
+}
+  
+.modal header {
+    background: #4f005f;
+    padding: 1rem;
+}
+  
+.modal header h2 {
+    margin: 0;
+    color: white;
+}
+
+.modal p{
+    padding: 1rem;
+}
+
+.modal content {
+    padding: 1rem;
+}
+  
+.actions {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal footer{
+    text-align: right;
+}
+
+.modal button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 8rem;
+}
+
+.modal button:hover,
+.modal button:active {
+  background-color: #510674;
+  border-color: #510674;
+}
+
+.modal button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.modal button.alternative:hover,
+.modal button.alternative:active {
+  background-color: #ddb3f8;
+}
+
+@media (min-width: 768px) {
+    .modal {
+      left: calc(50% - 20rem);
+      width: 40rem;
+    }
+}

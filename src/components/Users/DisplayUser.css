@@ -1,0 +1,21 @@
+.display-user {
+    background-color: #7db9fd;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.display-user label {
+    display: block;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+    
+}
